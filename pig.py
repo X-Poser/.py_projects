@@ -128,41 +128,44 @@ def winTest():
             if position >= 1001:
                 break
 
-
-print("Welcome to the Game of Pig.")
-print("Your Goal is to get 100 points or more to win.")
-print("To do this each turn you have the choice to either roll or bank.")
-print("If you choose to roll you will roll a 6 sided die and have the oportunity to add 2-6 points to your round score. However if you roll a 1 then your round score goes to zero the turn is over")
-print("If you choose to bank then your round score getts added to your total score and the turn is over.")
-print("You only win if you bank your points")
-print("Good luck")
-space()
-
-for i in range(int(input("How many players are there? "))):
-    print(f'Player {i + 1}')
-    name = input("What is your Name? ")
-    playerList.append([name, 0])
-
-for i in range(int(input("How many Bots would you like to play against? "))):
-    botNum = str(f'Bot {i + 1}')
-    botList.append([botNum, 0])
-
-space()
-
-print("Here is the player list.")
-
-for index in playerList:
-    print(index[0])
-
-for index in botList:
-    print(index[0])
-
-space()
-
-while not win:
-    turn += 1
-    print(turn)
-    playerTurn()
-    botTurn()
-    winTest()
+def main():
+    global turn
     
+    print("Welcome to the Game of Pig.")
+    print("Your Goal is to get 100 points or more to win.")
+    print("To do this each turn you have the choice to either roll or bank.")
+    print("If you choose to roll you will roll a 6 sided die and have the oportunity to add 2-6 points to your round score. However if you roll a 1 then your round score goes to zero the turn is over")
+    print("If you choose to bank then your round score getts added to your total score and the turn is over.")
+    print("You only win if you bank your points")
+    print("Good luck")
+    space()
+    
+    for i in range(int(input("How many players are there? "))):
+        print(f'Player {i + 1}')
+        name = input("What is your Name? ")
+        playerList.append([name, 0])
+        
+    for i in range(int(input("How many Bots would you like to play against? "))):
+        botNum = str(f'Bot {i + 1}')
+        botList.append([botNum, 0])
+        
+    space()
+    
+    print("Here is the player list.")
+    
+    for index in playerList:
+        print(index[0])
+        
+    for index in botList:
+        print(index[0])
+        
+    space()
+    
+    while not win:
+        turn += 1
+        print(turn)
+        playerTurn()
+        botTurn()
+        winTest()
+        
+main()  
