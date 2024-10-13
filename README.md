@@ -5,4 +5,4 @@ This repository will include all of my python projects. I am not a career progra
 
 Contents:
 1. The game of pig,
-    pig.py: This is a program of the game of pig that I created while in high school. It runs in pyhton 3.11 and is capable of supporting immense numbers of players and bots.
+    pig.py: This is a program of the game of pig that I created while in high school. It runs in python 3.11 and is capable of supporting immense numbers of players and bots.
